@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+min-height: 100vh;
+padding: 40px 20px;
+}
+
+.task-container {
+width: 100%;
+max-width: 750px;
+margin: auto;
+background-color: white;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+text-align: center;
+margin-bottom: 25px;
+}
+
+/* Task Input */
+
+.task-input {
+display: flex;
+gap: 10px;
+}
+
+#taskInput {
+flex: 1;
+padding: 12px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 5px;
+outline: none;
+}
+
+#taskInput:focus {
+border-color: #555;
+}
+
+#addTaskBtn {
+padding: 12px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+background-color: #333;
+color: white;
+font-size: 15px;
+}
+
+/* Error Message */
+
+#errorMessage {
+margin-top: 8px;
+min-height: 20px;
+font-size: 14px;
+}
+
+/* Filter Buttons */
+
+.filters {
+display: flex;
+gap: 10px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.filters button {
+padding: 8px 15px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+background-color: #ddd;
+}
+
+/* Task List */
+
+#taskList {
+list-style: none;
+margin-top: 10px;
+}
+
+#taskList li {
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 12px;
+margin-bottom: 10px;
+background-color: #f1f1f1;
+border-radius: 6px;
+}
+
+#taskList li span {
+flex: 1;
+word-break: break-word;
+}
+
+/* Task Buttons */
+
+.complete-btn,
+.edit-btn,
+.delete-btn {
+padding: 8px 12px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* Completed Task */
+
+.completed span {
+text-decoration: line-through;
+opacity: 0.6;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+body {
+    padding: 20px 10px;
+}
+
+.task-container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.task-input {
+    flex-direction: column;
+}
+
+#taskInput {
+    width: 100%;
+}
+
+#addTaskBtn {
+    width: 100%;
+}
+
+.filters {
+    flex-wrap: wrap;
+}
+
+.filters button {
+    flex: 1;
+    min-width: 80px;
+}
+
+#taskList li {
+    flex-wrap: wrap;
+}
+
+#taskList li span {
+    width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 5px;
+}
+
+.complete-btn,
+.edit-btn,
+.delete-btn {
+    flex: 1;
+}
+
+}
